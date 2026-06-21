@@ -5,11 +5,13 @@ import SignalsView from './components/SignalsView'
 import PortfolioView from './components/PortfolioView'
 import StrategiesView from './components/StrategiesView'
 import AnalysisView from './components/AnalysisView'
+import BacktestView from './components/BacktestView'
 
 const TABS = [
   { id: 'signals', label: 'Signals' },
   { id: 'portfolio', label: 'Paper Portfolio' },
   { id: 'strategies', label: 'Strategies' },
+  { id: 'backtest', label: 'Backtest' },
   { id: 'analysis', label: 'Research' },
 ]
 const regimeTone = (r) => ({ bullish: 'green', bearish: 'red', range: 'amber', volatile: 'red', event_risk: 'amber' }[r] || 'slate')
@@ -54,6 +56,7 @@ export default function App() {
         {tab === 'signals' && <SignalsView />}
         {tab === 'portfolio' && <PortfolioView />}
         {tab === 'strategies' && <StrategiesView />}
+        {tab === 'backtest' && <BacktestView />}
         {tab === 'analysis' && <AnalysisView />}
       </main>
 

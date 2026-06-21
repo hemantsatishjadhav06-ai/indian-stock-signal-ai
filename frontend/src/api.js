@@ -21,3 +21,4 @@ export const getPortfolio = () => api('/api/portfolio')
 export const placeOrder = (body) => api('/api/orders', { method: 'POST', body: JSON.stringify(body) })
 export const scanAndTrade = () => api('/api/scan-and-trade', { method: 'POST' })
 export { BASE }
+export const runBacktest = (body) => api('/api/backtest', { method: 'POST', body: JSON.stringify(body) })
