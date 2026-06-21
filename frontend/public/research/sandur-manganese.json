@@ -1,0 +1,55 @@
+{
+  "id": "sandur-manganese",
+  "title": "Sandur Manganese & Iron Ores Ltd",
+  "ticker": "SANDUMA.NS",
+  "as_of": "2026-06-21",
+  "verdict": "Verified · quality cyclical, fairly valued",
+  "verdict_tone": "amber",
+  "summary": "The workbook's inputs are accurate and internally consistent — price, market cap, EPS, P/E, ROE, debt and book value all reconcile with live market data and company filings. Sandur is a high-return (ROE ~22%), low-debt (D/E 0.31x) miner compounding sales at ~27% over 11 years, but it is commodity-cyclical (FY22's ₹675 Cr profit spike vs FY26's ₹657 Cr shows the swing) and pays a thin dividend. Two items need a human look (flagged below). Trades at ~16x earnings.",
+  "fundamental": [
+    { "label": "Market cap", "value": "₹10,292 Cr" },
+    { "label": "Price (FV ₹10)", "value": "₹211.72" },
+    { "label": "EPS (FY26, TTM)", "value": "₹13.51" },
+    { "label": "P/E (TTM)", "value": "15.7x" },
+    { "label": "P/B", "value": "3.2x (BVPS ₹66.9)" },
+    { "label": "ROE", "value": "22.3%", "note": "year-end basis ~20%" },
+    { "label": "Operating margin (FY26)", "value": "~23.8%" },
+    { "label": "Net margin (FY26)", "value": "12.9%" },
+    { "label": "Debt / Equity", "value": "0.31x", "note": "borrowings ₹999 Cr vs net worth ₹3,254 Cr" },
+    { "label": "Sales (FY26)", "value": "₹5,088 Cr (+62% YoY)" },
+    { "label": "Net profit (FY26)", "value": "₹657 Cr (+40% YoY)" },
+    { "label": "11-yr Sales CAGR", "value": "~27%" },
+    { "label": "11-yr PAT CAGR", "value": "~34%" },
+    { "label": "Dividend (FY26)", "value": "₹24.3 Cr (~4% payout)", "note": "low payout / ~0.2% yield" },
+    { "label": "Capital actions", "value": "2:1 bonus (Aug 2025); ₹1,000 Cr QIP (FY25)" }
+  ],
+  "technical": [
+    { "label": "Last close", "value": "₹211.72" },
+    { "label": "50-DMA", "value": "₹219.6", "note": "price below — short-term soft" },
+    { "label": "200-DMA", "value": "₹207.0", "note": "price above — long trend intact" },
+    { "label": "RSI(14)", "value": "43", "note": "neutral, pulled back" },
+    { "label": "ADX(14)", "value": "13.7", "note": "no trend / range conditions" },
+    { "label": "52-week range", "value": "₹141 – ₹273", "note": "~22% off the high" },
+    { "label": "Read", "value": "Long-term uptrend intact; consolidating below the 50-DMA" }
+  ],
+  "validation": [
+    { "label": "Current price", "claimed": "₹211.72", "checked": "₹211.72 (live)", "status": "ok" },
+    { "label": "Market capitalisation", "claimed": "₹10,291.81 Cr", "checked": "₹10,292 Cr (live)", "status": "ok" },
+    { "label": "EPS (TTM)", "claimed": "₹13.51 (implied)", "checked": "₹13.51 (live)", "status": "ok" },
+    { "label": "P/E (TTM)", "claimed": "15.7x (implied)", "checked": "15.67x (live)", "status": "ok" },
+    { "label": "ROE", "claimed": "~20%", "checked": "22.3% (live)", "status": "ok" },
+    { "label": "Debt / Equity", "claimed": "0.31x", "checked": "0.31x (live 30.6%)", "status": "ok" },
+    { "label": "Book value / net worth", "claimed": "₹3,254 Cr", "checked": "BVPS ₹66.9 (live)", "status": "ok" },
+    { "label": "Share count / bonus", "claimed": "48.6 Cr sh (equity ₹486 Cr)", "checked": "2:1 bonus Aug-2025 confirmed (16.2→48.6 Cr)", "status": "ok" },
+    { "label": "FY25 net profit & sales", "claimed": "₹470.17 Cr / ₹3,135.06 Cr", "checked": "matches company filing", "status": "ok" },
+    { "label": "Q1FY26 net profit", "claimed": "₹166.63 Cr", "checked": "₹167 Cr reported", "status": "ok" },
+    { "label": "FY26 'Other Expenses' line", "claimed": "₹1,434 Cr", "checked": "vs ₹52 Cr FY25 — likely reclassification", "status": "warn", "note": "Power/fuel, other mfg and selling lines are blank for FY26 and appear folded into 'Other Expenses'. OPM and the quarterly P&L still reconcile, so this looks like a Screener bucketing change, not a real cost jump — but confirm in the FY26 annual report (this is exactly the workbook's own 'misc expenses' fraud-check)." },
+    { "label": "Formula sheets (DCF, Buffett, Ratios, Moat)", "claimed": "populated", "checked": "values not cached in the file", "status": "warn", "note": "These compute from the Data Sheet but were blank on read (open in Excel to recalc). DCF inputs are aggressive — 20% FCF growth for 10 yrs, 7% discount, 2% terminal — stress-test the growth assumption for a cyclical miner." }
+  ],
+  "sources": [
+    { "title": "Angel One — Q1FY26 results, 2:1 bonus", "url": "https://www.angelone.in/news/market-updates/sandur-manganese-announces-q1fy26-results-net-profit-surges-to-167-crore-declares-2-1-bonus-share-issue" },
+    { "title": "Business Standard — Q4FY25 PAT ₹156 Cr", "url": "https://www.business-standard.com/markets/capital-market-news/sandur-manganese-slumps-as-q4-pat-slides-5-yoy-to-rs-156-cr-125052901430_1.html" },
+    { "title": "Screener — SANDUMA financials", "url": "https://www.screener.in/company/SANDUMA/consolidated/" },
+    { "title": "Sandur Group — Bonus issue", "url": "https://www.sandurgroup.com/bonus-issue" }
+  ]
+}

@@ -1,0 +1,37 @@
+# Render Blueprint - deploys the backend (Docker web service) and the
+# frontend (static site). Free tier friendly. After the first deploy, set
+# the two cross-URLs (see README): backend CORS_ORIGINS and frontend VITE_API_BASE.
+services:
+  - type: web
+    name: stock-ai-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATA_PROVIDER
+        value: yfinance
+      - key: BENCHMARK
+        value: ^NSEI
+      - key: DB_URL
+        value: sqlite:///./trading.db   # ephemeral on free tier; use Render Postgres for persistence
+      - key: CORS_ORIGINS
+        sync: false                      # set to your frontend URL after it deploys
+
+  - type: web
+    name: stock-ai-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: VITE_API_BASE
+        sync: false                      # set to your backend URL after it deploys
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
