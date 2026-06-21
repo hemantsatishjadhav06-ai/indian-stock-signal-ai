@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     alpaca_key_id: str = ""              # NEVER hardcode - env only (US/crypto, optional)
     alpaca_secret_key: str = ""
     alpaca_base_url: str = "https://paper-api.alpaca.markets"
+    twelvedata_api_key: str = ""   # free key at twelvedata.com - works from Render
 
     db_url: str = "sqlite:///./trading.db"
 
@@ -24,9 +25,7 @@ class Settings(BaseSettings):
 
     benchmark: str = "^NSEI"             # NIFTY 50
     default_watchlist: str = (
-        "RELIANCE.NS,TCS.NS,HDFCBANK.NS,INFY.NS,ICICIBANK.NS,SBIN.NS,"
-        "BHARTIARTL.NS,LT.NS,ITC.NS,KOTAKBANK.NS,AXISBANK.NS,HINDUNILVR.NS,"
-        "MARUTI.NS,SUNPHARMA.NS,TATAMOTORS.NS"
+        "RELIANCE.NS,TCS.NS,HDFCBANK.NS,INFY.NS,ICICIBANK.NS,SBIN.NS"
     )
 
     @property
